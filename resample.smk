@@ -23,7 +23,7 @@ rule cal_freq_norfreq:
     output:
           freq_norfreq = "freq_norfreq/for_{sample}.bed"
     shell:
-         "zcat {input.all_runs} | python3 scripts/cal_freq_norfreq.py {output.freq_norfreq}"
+         "cat {input.all_runs} | python3 scripts/cal_freq_norfreq.py {output.freq_norfreq}"
 
 
 rule resample_bed_file:
